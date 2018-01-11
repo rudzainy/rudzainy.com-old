@@ -1,0 +1,17 @@
+/* Bootstrap Overwrites */
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.bg-white {
+  background-color: #FFF;
+}
+
+#waves {
+  margin-top: 2rem;
+}
+
+#home-jumbotron {
+  margin-bottom: 0;
+}

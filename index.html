@@ -1,31 +1,597 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71254593-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-71254593-1');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Online portfolio of Rudzainy Rahman - web apps, websites, graphic design, UI/UX">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#264bac">
+  <meta name="theme-color" content="#ffffff">
+
   <title>Rudzainy Rahman</title>
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-  <!-- /Bootstrap -->
+  <!-- /Bootstrap CSS -->
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  <!-- /Font Awesome -->
+
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
 </head>
 <body>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{your-app-id}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{latest-api-version}'
+      });
+
+      FB.AppEvents.logPageView();
+
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="assets/images/tom-smile.png" width="30" height="30" alt="logo" class="rounded">
       </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#works">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-0 d-sm-flex flex-row justify-content-around">
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.facebook.com/rudzainy.rahman"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.instagram.com/rudzainy"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.twitter.com/rudzainy"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.github.com/rudzainy"><i class="fab fa-github"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="mailto:hello@rudzainy.com"><i class="far fa-envelope"></i></a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
+  <!-- /Navbar -->
+
+  <div class="jumbotron jumbotron-fluid bg-white" id="home-jumbotron">
+    <div class="container">
+      <h1 class="display-4">Hi! I'm Rudzainy Rahman</h1>
+      <p class="lead">I do websites & web apps, graphic design and some UI/UX stuffs</p>
+      <canvas id="waves"></canvas>
+    </div>
+  </div>
+  <div class="container" id="works">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card-columns">
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/eezeejob.png" alt="Eezee Job app">
+            <div class="card-body">
+              <h5 class="card-title">Eezee Job</h5>
+              <p class="card-text">A job portal built with Ruby on Rails</p>
+              <p class="card-text"><a target="_blank" href="https://www.eezeejob.com/">Click here to go to Eezee Job</a></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>September 2017</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Ruby on Rails</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card bg-primary text-white p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p>Be selfish<br>for the right reasons.</p>
+              <footer class="blockquote-footer text-white">
+                <small>
+                  RR, <cite title="9 July 2017">9 July 2017</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/mastersteel.jpg" alt="Mastersteel Medical">
+            <div class="card-body">
+              <h5 class="card-title">Mastersteel Medical</h5>
+              <p class="card-text">A website for medical bed and accessories manufacturing company.</p>
+              <p class="card-text"><a target="_blank" href="https://www.mastersteel.com.my">Check out the website here</a></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>February 2017</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Wordpress</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/mab-app.png" alt="Malaysia Airlines Meal Booking app">
+            <div class="card-body">
+              <h5 class="card-title">Malaysia Airlines Meal Booking App</h5>
+              <p class="card-text">This was my team's submission for MAB Hackathon 2017. We build an in-flight meals booking system using React Native with a Ruby on Rails backend.</p>
+              <p class="card-text"><a target="_blank" href="https://mab-champion.herokuapp.com/">Check out the app here!</a></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>Feb 2017</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Ruby on Rails</span>
+                <span class="badge badge-pill badge-secondary">API</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/kontact-app.png" alt="Kontact app">
+            <div class="card-body">
+              <h5 class="card-title">Kontact</h5>
+              <p class="card-text">A CRM I build using ReactJS for the front end and Ruby on Rails for the back end.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>Jan 2017</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Ruby on Rails</span>
+                <span class="badge badge-pill badge-secondary">ReactJS</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/sushicat-logo.png" alt="Sushicat logo">
+            <div class="card-body">
+              <h5 class="card-title">Sushicat</h5>
+              <p class="card-text">A logo for a pet caring blog. This logo was traced from the blog owner's sketch.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>September 2016</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/seulas-fashion-logo.png" alt="Seulas Fashion logo">
+            <div class="card-body">
+              <h5 class="card-title">Seulas Fashion</h5>
+              <p class="card-text">Logo design for an online fashion blog. Unfortunately the logos was rejected.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>September 2016</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+                <span class="badge badge-pill badge-secondary">Logo design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/mealdeals-app.jpg" alt="Meal Deals app">
+            <div class="card-body">
+              <h5 class="card-title">Meal Deals</h5>
+              <p class="card-text">I build the web app + back end API endpoint for a restaurant coupon app. The app was never launched.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>September 2016</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Ruby on Rails</span>
+                <span class="badge badge-pill badge-secondary">API</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card bg-primary text-white text-center p-3">
+            <blockquote class="blockquote mb-0">
+              <p>Be bad, but don't forget<br>to also be good.</p>
+              <footer class="blockquote-footer text-white">
+                <small>
+                  RR, <cite title="22 May 2016">22 May 2016</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/browsercrush-app.jpg" alt="Browser Crush clone app">
+            <div class="card-body">
+              <h5 class="card-title">Browser Crush Clone</h5>
+              <p class="card-text">This is a clone of an online game called <a href="http://www.browsercrush.com/">Browsercrush</a>. The objective of the game is to close as many browsers as you can before new ones pop out.</p>
+              <p class="card-text"><a target="_blank" href="https://browsercrush.herokuapp.com/">Click here to play the game!</a></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>May 2016</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Ruby</span>
+                <span class="badge badge-pill badge-secondary">Javascript</span>
+                <span class="badge badge-pill badge-secondary">Sinatra</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/cotton-metaphore-logo.png" alt="Cotton Metaphore logo">
+            <div class="card-body">
+              <h5 class="card-title">Cotton Metaphore</h5>
+              <p class="card-text">Logo for <a href="http://cottonmetaphore.com/">Cotton Metaphore</a>, an online cotton dress brand.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>Jan 2016</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Logo design</span>
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/dezeno.jpg" alt="Dezeno">
+            <div class="card-body">
+              <h5 class="card-title">Dezeno</h5>
+              <p class="card-text">Website design for an interior design company.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>Jan 2016</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Wordpress</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/tengquorak-app.png" alt="Teng-Quora-k app">
+            <div class="card-body">
+              <h5 class="card-title">Teng-Quora-k</h5>
+              <p class="card-text">This is a clone of an online O&A site <a href="http://www.quora.com/">Quora</a>.</p>
+              <p class="card-text"><a target="_blank" href="https://teng-quora-k.herokuapp.com/">Click here to see the app!</a></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>Nov 2015</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Ruby</span>
+                <span class="badge badge-pill badge-secondary">Javascript</span>
+                <span class="badge badge-pill badge-secondary">Sinatra</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card bg-primary text-white p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p>
+                Hearts are everywhere<br>
+                They are all around us<br>
+                The one you have right now might not even be yours entirely
+              </p>
+              <p>
+                So go out and complete yours
+              </p>
+              <p>
+                And at the same time<br>
+                let others look for theirs<br>
+                in yours.
+              </p>
+              <footer class="blockquote-footer text-white">
+                <small>
+                  RR, <cite title="25 September 2015">25 September 2015</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/jalur_gemilang_FA_no_sig.jpg" alt="Jalur Gemilang">
+            <div class="card-body">
+              <h5 class="card-title">Jalur Gemilang</h5>
+              <p class="card-text">Low poly render of Jalur Gemilang, the national flag of Malaysia.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>August 2015</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card bg-primary text-white p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p>
+                You are hot<br>
+                because you have red lips<br>
+                because you have curved hips<br>
+                because you bite your fingertips<br>
+                because you pulled back your hair and fasten them with hair clips.
+              </p>
+              <p>
+                I am hot<br>
+                because I didn't switch on the fan.
+              </p>
+              <footer class="blockquote-footer text-white">
+                <small>
+                  RR, <cite title="3 December 2012">3 December 2012</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/marco-brand.jpg" alt="Maritime College branding">
+            <div class="card-body">
+              <h5 class="card-title">Maritime College</h5>
+              <p class="card-text">Corporate identity for Maritime College (MARCO), a maritime training academy.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2011</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+                <span class="badge badge-pill badge-secondary">Graphic design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/pc-logo-3.jpg" alt="Prominent Chapter logo">
+            <div class="card-body">
+              <h5 class="card-title">Prominent Chapter</h5>
+              <p class="card-text">Logo design for a secretary company. This logo was never used.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2011</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+                <span class="badge badge-pill badge-secondary">Logo design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/pemm-web.jpg" alt="Malaysia Maritime Association website">
+            <div class="card-body">
+              <h5 class="card-title">Malaysia Maritime Association</h5>
+              <p class="card-text">Website I did for the Malaysian Maritime Association.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2010</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Joomla</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img" src="assets/images/portfolio/mma-logo.png" alt="Card image">
+            <div class="card-body">
+              <h5 class="card-title">Malaysia Maritime Association</h5>
+              <p class="card-text">Logo I did for the Malaysian Maritime Association.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2010</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+                <span class="badge badge-pill badge-secondary">Logo design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/myous-logo.png" alt="Myous Maritime logo">
+            <div class="card-body">
+              <h5 class="card-title">Myous Maritime</h5>
+              <p class="card-text">Logo design for a maritime solutions company.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2010</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+                <span class="badge badge-pill badge-secondary">Logo design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/mf.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Marliyati Froz</h5>
+              <p class="card-text">This logo was created for a frozen food company. The client selected the logo in red.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2009</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+                <span class="badge badge-pill badge-secondary">Logo design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/jkm.jpg" alt="Jabatan Kebajikan Masyarakat app">
+            <div class="card-body">
+              <h5 class="card-title">Jabatan Kebajikan Masyarakat</h5>
+              <p class="card-text">I did the website design and front end for this project. The website's design has since been updated.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2008</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Photoshop</span>
+                <span class="badge badge-pill badge-secondary">Web design</span>
+                <span class="badge badge-pill badge-secondary">Joomla</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/agar.jpg" alt="Atap Genting Atap Rumbia logo">
+            <div class="card-body">
+              <h5 class="card-title">Atap Genting Atap Rumbia</h5>
+              <p class="card-text">Logo design for a theatre production.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2008</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Illustrator</span>
+                <span class="badge badge-pill badge-secondary">Logo design</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/seri_malaysia.jpg" alt="Seri Malaysia Hotels website">
+            <div class="card-body">
+              <h5 class="card-title">Seri Malaysia Hotels</h5>
+              <p class="card-text">Web design for a hotel chain in Malaysia. The website's design has since been updated.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2007</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">HTML</span>
+                <span class="badge badge-pill badge-secondary">CSS</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/sara.jpg" alt="Sara">
+            <div class="card-body">
+              <h5 class="card-title">Sara</h5>
+              <p class="card-text">Color study. Artwork by Zint.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2004</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Photoshop</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/saint-of-ro.jpg" alt="Saint of Ragnarok website">
+            <div class="card-body">
+              <h5 class="card-title">Saint of Ragnarok</h5>
+              <p class="card-text">This is one of the first website I did. It's a fansite for Ragnarok Online, a popular online MMORPG.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2004</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">HTML</span>
+                <span class="badge badge-pill badge-secondary">CSS</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/gxfc.gif" alt="Gong Xi Fa Chai 2003">
+            <div class="card-body">
+              <h5 class="card-title">Gong Xi Fa Chai 2003</h5>
+              <p class="card-text">Artwork for Chinese New Year 2003.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2003</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Ink pen</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="assets/images/portfolio/jiihan.png" alt="Jiihan">
+            <div class="card-body">
+              <h5 class="card-title">Jiihan</h5>
+              <p class="card-text">Color study. Artwork by Ayez.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-secondary"><small>2003</small></li>
+              <li class="list-group-item">
+                <span class="badge badge-pill badge-secondary">Adobe Photoshop</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron jumbotron-fluid bg-primary mt-5 mb-0" id="contact">
+    <div class="container text-center text-white">
+      <h3>Wanna grab a cup <br class="d-md-none d-lg-none" />of <i class="fas fa-coffee"></i> with me?</h3>
+      <p>You can reach me through any of these channels:</p>
+      <h3>
+        <a class="text-white" target="_blank" href="https://www.facebook.com/rudzainy.rahman"><i class="fab fa-facebook-f"></i></a>
+        <a class="text-white ml-5" target="_blank" href="https://www.instagram.com/rudzainy"><i class="fab fa-instagram"></i></a>
+        <a class="text-white ml-5" target="_blank" href="https://www.twitter.com/rudzainy"><i class="fab fa-twitter"></i></a>
+        <a class="text-white ml-5" target="_blank" href="https://www.github.com/rudzainy"><i class="fab fa-github"></i></a>
+        <a class="text-white ml-5" target="_blank" href="mailto:hello@rudzainy.com"><i class="far fa-envelope"></i></a>
+      </h3>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid bg-light pt-3">
+    <div class="row">
+      <div class="col-sm">
+        <p class="text-center">Made with <i class="fas fa-heart text-danger"></i> in KL, MY</p>
+      </div>
+    </div>
+  </div>
+  <!-- /Footer -->
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- /jQuery -->
+
+  <script src="assets/javascripts/wave.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <!-- /Bootstrap JS -->
 </body>
 </html>
